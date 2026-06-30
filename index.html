@@ -69,6 +69,12 @@
   }
   .citation a{color:var(--muted);text-decoration-color:var(--line);}
   .citation a:hover{color:var(--accent);}
+  .citation-source{
+    margin-top:10px;
+    font-size:12px;
+    color:var(--muted-soft);
+    max-width:60ch;
+  }
 
   /* ---------- Selector ---------- */
   .selector{
@@ -494,7 +500,8 @@
   <header>
     <p class="eyebrow">98 countries · 1999–2019</p>
     <h1 class="title">Regulatory &amp; Supervisory Independence Index</h1>
-    <p class="citation">Index capturing the political independence of banking regulators and supervisors (<a href="https://doi.org/10.1016/j.jbankfin.2024.107318" target="_blank" rel="noopener">Fraccaroli, Sowerbutts &amp; Whitworth, 2024</a>).</p>
+    <p class="citation">Index capturing the political independence of banking regulators and supervisors.</p>
+    <p class="citation citation-source">Source: Fraccaroli, N., Sowerbutts, R., Whitworth, A. (2024). <em>Does regulatory and supervisory independence affect financial stability?</em> Journal of Banking &amp; Finance, 170, 107318. <a href="https://doi.org/10.1016/j.jbankfin.2024.107318" target="_blank" rel="noopener">doi.org/10.1016/j.jbankfin.2024.107318</a><br>Please cite the paper above if you use this data.</p>
   </header>
 
   <section class="selector">
@@ -541,12 +548,11 @@
         <span class="dim-label">Institutional</span>
       </button>
       <button class="dim-btn" data-dim="regulatory" aria-label="What is regulatory independence?">
-        <svg class="dim-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3.5" y="6.5" width="17" height="9.5" rx="1.5" transform="rotate(45 12 11.2)"/>
-          <line x1="18.5" y1="17.2" x2="29" y2="27.7"/>
-          <line x1="13.8" y1="12.5" x2="6.3" y2="20"/>
-          <rect x="25" y="33" width="19" height="6.5" rx="1.2"/>
-          <line x1="34.5" y1="33" x2="34.5" y2="27.5"/>
+        <svg class="dim-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="9" width="20" height="11" rx="5.5" transform="rotate(45 13 14.5)"/>
+          <line x1="20.5" y1="22" x2="33" y2="34.5"/>
+          <rect x="3" y="36.5" width="22" height="5" rx="1.8"/>
+          <rect x="0" y="42" width="28" height="5.5" rx="1.8"/>
         </svg>
         <span class="dim-label">Regulatory</span>
       </button>
@@ -577,11 +583,6 @@
     </div>
     <div class="bd-year" id="bdYearWrap" style="display:none;">Index components for <span id="bdYearLabel">—</span> — hover the chart to change year</div>
   </section>
-
-  <footer>
-    Source: Fraccaroli, N., Sowerbutts, R., Whitworth, A. (2024). <em>Does regulatory and supervisory independence affect financial stability?</em> Journal of Banking &amp; Finance, 170, 107318. <a href="https://doi.org/10.1016/j.jbankfin.2024.107318" target="_blank" rel="noopener">doi.org/10.1016/j.jbankfin.2024.107318</a><br>
-    Please cite the paper above if you use this data.
-  </footer>
 
 </div>
 
