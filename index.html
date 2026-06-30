@@ -289,10 +289,12 @@
   }
   .rsi-line{
     fill:none;
-    stroke-width:4;
+    stroke-width:7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
   }
   .rsi-point{
-    stroke-width:4;
+    stroke-width:3;
   }
   .hover-line{
     stroke:var(--ink);
@@ -630,7 +632,7 @@ function drawChart(){
     const pts = d.series.map(s=>`${xFor(s.year)},${yFor(s.RSI)}`).join(' ');
     lines += `<polyline class="rsi-line" data-iso3="${iso3}" stroke="${c}" points="${pts}"></polyline>`;
     d.series.forEach(s=>{
-      lines += `<circle class="rsi-point" data-iso3="${iso3}" data-year="${s.year}" cx="${xFor(s.year)}" cy="${yFor(s.RSI)}" r="3.5" fill="${c}" stroke="${c}"></circle>`;
+      lines += `<circle class="rsi-point" data-iso3="${iso3}" data-year="${s.year}" cx="${xFor(s.year)}" cy="${yFor(s.RSI)}" r="5" fill="${c}" stroke="${c}"></circle>`;
     });
   });
 
@@ -663,10 +665,10 @@ function drawChart(){
 function setHoverYear(year){
   hoverYear = year;
   const svg = document.getElementById('chart');
-  [...svg.querySelectorAll('.rsi-point')].forEach(p=>p.setAttribute('r','3.5'));
+  [...svg.querySelectorAll('.rsi-point')].forEach(p=>p.setAttribute('r','5'));
   selected.forEach(iso3=>{
     const pt = svg.querySelector(`.rsi-point[data-iso3="${iso3}"][data-year="${year}"]`);
-    if(pt){ pt.setAttribute('r','6'); }
+    if(pt){ pt.setAttribute('r','8'); }
   });
   const hl = document.getElementById('hoverLine');
   hl.setAttribute('x1', xFor(year)); hl.setAttribute('x2', xFor(year));
