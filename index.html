@@ -743,7 +743,7 @@ function drawChart(){
 
   let yearTicks = '';
   YEARS.forEach((y,i)=>{
-    if(y % 5 === 0 || i===0 || i===YEARS.length-1){
+    if((y - YEAR_MIN) % 3 === 0){
       yearTicks += `<text class="year-label" text-anchor="middle" x="${xFor(y)}" y="${H-4}">${y}</text>`;
     }
   });
