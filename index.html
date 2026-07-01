@@ -362,6 +362,7 @@
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
+    text-align:center;
   }
   .bd-item .bd-label{
     font-family:var(--font-mono);
@@ -743,7 +744,7 @@ function drawChart(){
 
   let yearTicks = '';
   YEARS.forEach((y,i)=>{
-    if((y - YEAR_MIN) % 3 === 0){
+    if((y - 2000) % 3 === 0 && y >= 2000){
       yearTicks += `<text class="year-label" text-anchor="middle" x="${xFor(y)}" y="${H-4}">${y}</text>`;
     }
   });
